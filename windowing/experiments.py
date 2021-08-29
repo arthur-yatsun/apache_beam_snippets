@@ -7,8 +7,8 @@ from base_pipeline import DirectRunner
 
 
 def experiments(pipeline):
-    global_window = beam.transforms.window.GlobalWindow()
-    print(f'{global_window.start=}, {global_window.end=}')
+global_window = beam.transforms.window.GlobalWindow()
+print(f'{global_window.start=}, {global_window.end=}')
 
 
 def run_pipeline():
