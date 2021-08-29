@@ -6,7 +6,6 @@ from apache_beam.options.pipeline_options import PipelineOptions
 from base_pipeline import DirectRunner
 
 
-def experiments(pipeline):
 global_window = beam.transforms.window.GlobalWindow()
 print(f'{global_window.start=}, {global_window.end=}')
 
