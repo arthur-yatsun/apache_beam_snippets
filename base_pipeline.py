@@ -1,7 +1,24 @@
+from abc import ABC, abstractmethod
+
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions
 
 from typing import Callable, Optional, Any, Tuple, Iterable
+
+
+class DirectRunner:
+    """Class to run pipeline with direct runner"""
+
+    pipeline_options = PipelineOptions()
+
+    @classmethod
+    def run(cls, pipeline):
+        with beam.Pipeline(options=cls.pipeline_options) as p:
+            pipeline(p)
+
+
+class DataflowRunner(DirectRunner):
+    ...
 
 
 class ShowElementInfo(beam.PTransform):
