@@ -29,4 +29,4 @@ class GetElementInfo(beam.DoFn):
 
 
 if __name__ == '__main__':
-    DirectRunner.run(experiments)
+    run_pipeline()
